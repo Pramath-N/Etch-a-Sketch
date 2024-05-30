@@ -1,5 +1,5 @@
 const cont = document.querySelector(".container");
-let NO_OF_BLOCKS = 12;
+let NO_OF_BLOCKS = 16;
 
 const rsBtn = document.createElement("button");
 cont.appendChild(rsBtn);
@@ -17,7 +17,7 @@ grid.style.width = "720px";
 grid.style.maxWidth = "720px";
 grid.style.height = "720px";
 grid.style.maxHeight = "720px";
-grid.margin = "auto";
+grid.style.margin = "auto";
 
 for(let i = 0; i < NO_OF_BLOCKS; i++){
     const currRow = document.createElement("div");
@@ -64,8 +64,10 @@ function updateGrid(noSquares){
 
 rsBtn.addEventListener("click", ()=> {
     let noSquares = prompt("Enter the number of squares on each sides: ");
-    while(isNaN(noSquares)){
-        noSquares = prompt("You have not enterd a number!\nEnter the number of squares on each sides: ");
+    while(isNaN(noSquares) || noSquares > 100){
+        if(isNaN(noSquares)) noSquares = prompt("You have not enterd a number!\nEnter the number of squares on each sides: ");
+        if(noSquares > 100) noSquares = prompt("Maximum limit ios 100!\nEnter the number of squares on each sides: ");
     }
+    
     updateGrid(noSquares);
 });
