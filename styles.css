@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    
+    width: 720px;
+    height: 720px;
+    max-width: 720px;
+    max-height: 720px;
+
+    border: thin solid black;
+
+    margin: 32px; 
+}
