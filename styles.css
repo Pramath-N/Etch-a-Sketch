@@ -3,12 +3,16 @@
     flex-direction: column;
     flex: 1 1 auto;
     
-    width: 720px;
-    height: 720px;
-    max-width: 720px;
-    max-height: 720px;
+    width: 800px;
+    height: 800px;
+    max-width: 800px;
+    max-height: 800px;
 
-    border: thin solid black;
+    margin: auto;
+    border: thin solid darkcyan;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 
     margin: 32px; 
 }
