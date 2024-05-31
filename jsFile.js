@@ -13,10 +13,10 @@ cont.appendChild(grid);
 grid.style.display = "flex";
 grid.style.flexDirection = "column";
 grid.style.flex = "1, 1, auto";
-grid.style.width = "720px";
-grid.style.maxWidth = "720px";
-grid.style.height = "720px";
-grid.style.maxHeight = "720px";
+grid.style.width = "960px";
+grid.style.maxWidth = "960px";
+grid.style.height = "960px";
+grid.style.maxHeight = "960px";
 grid.style.margin = "auto";
 
 
@@ -34,7 +34,7 @@ for(let i = 0; i < NO_OF_BLOCKS; i++){
         currSquare.style.flex = "1 1 auto";
         currRow.appendChild(currSquare);
         currSquare.addEventListener("mouseover", () =>{
-            currSquare.style.backgroundColor = "black";
+            currSquare.style.backgroundColor = "gray";
         });
     }
 }
@@ -63,7 +63,7 @@ function updateGrid(noSquares){
             currRow.appendChild(currSquare);
 
             currSquare.addEventListener("mouseover", () =>{
-                currSquare.style.backgroundColor = "black";
+                currSquare.style.backgroundColor = "gray";
             });
         }
     }
