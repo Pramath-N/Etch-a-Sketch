@@ -19,6 +19,7 @@ grid.style.height = "720px";
 grid.style.maxHeight = "720px";
 grid.style.margin = "auto";
 
+
 for(let i = 0; i < NO_OF_BLOCKS; i++){
     const currRow = document.createElement("div");
     currRow.style.display = "flex";
@@ -32,6 +33,9 @@ for(let i = 0; i < NO_OF_BLOCKS; i++){
         if(j != 0) currSquare.style.borderLeft = "thin solid black";
         currSquare.style.flex = "1 1 auto";
         currRow.appendChild(currSquare);
+        currSquare.addEventListener("mouseover", () =>{
+            currSquare.style.backgroundColor = "black";
+        });
     }
 }
 
@@ -57,6 +61,10 @@ function updateGrid(noSquares){
             if(j != 0) currSquare.style.borderLeft = "thin solid black";
             currSquare.style.flex = "1 1 auto";
             currRow.appendChild(currSquare);
+
+            currSquare.addEventListener("mouseover", () =>{
+                currSquare.style.backgroundColor = "black";
+            });
         }
     }
     cont.appendChild(grid);
